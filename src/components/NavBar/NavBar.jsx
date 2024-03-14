@@ -5,9 +5,9 @@ const NavBar =()=>{
     return(
         <nav className={clases.nav}>
             <Logo />
-            <ul className={clases.list} ><a className={clases.enlaces}  href="#">Telefonos</a></ul> 
-            <ul className={clases.list} ><a className={clases.enlaces}  href="#">Mecheros</a></ul>
-            <ul className={clases.list} ><a className={clases.enlaces}  href="#">Sillas</a></ul>
+            <ul className={clases.list} ><a className={clases.enlaces}  href="#">Nuevo</a></ul> 
+            <ul className={clases.list} ><a className={clases.enlaces}  href="#">Destacados</a></ul>
+            <ul className={clases.list} ><a className={clases.enlaces}  href="#">Electronica</a></ul>
             <CartWidget />
         </nav>
     )
