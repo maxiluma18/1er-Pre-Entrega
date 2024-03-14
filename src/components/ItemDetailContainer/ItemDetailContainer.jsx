@@ -7,19 +7,19 @@ const ItemDetailContainer =()=>{
     const [product, setProduct] =  useState(null)
 
 
-    const {itemid}  = useParams();
+    const {itemId}  = useParams();
     
     useEffect(()=>{
-        getProductById(itemid)
+        getProductById(itemId)
             .then(result=>{
                 setProduct(result)
             })
-    }, [itemid])
+    }, [itemId])
 
 
     return(
         <main>
-            <h1>Detalle de producto</h1>
+            <h1 style={{textAlign:"center", textTransform:"uppercase", color:" #8d5f26"}}>Detalle de producto</h1>
             <ItemDetail { ...product}/>
         </main>
     )

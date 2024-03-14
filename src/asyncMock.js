@@ -33,7 +33,7 @@ export const getProductsByCategory = (categoriaId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.filter(prod => prod.categoria === categoriaId))
-        }, 1000)
+        }, 100)
     })
 }
 

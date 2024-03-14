@@ -12,7 +12,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting="Bienvenidos a Subaaton"/>}/>
-          <Route path='/item/:itemid'  element={<ItemDetailContainer />}/>
+          <Route path="/categoria/:categoriaId" element={<ItemListContainer greeting="Productos de la categoria elegida"/>} />
+          <Route path='/item/:itemId'  element={<ItemDetailContainer />}/>
         </Routes>
       </BrowserRouter>
     </>

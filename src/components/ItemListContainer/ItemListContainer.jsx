@@ -1,17 +1,22 @@
 import clase from "./ItemListContainer.module.css"
 import  { useState,useEffect } from 'react'
-import { getProducts } from "../../asyncMock"
+import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer =(props)=>{
     const [products, setProducts] = useState([])
 
+    const {categoriaId} =useParams()
+
     useEffect(()=>{
-        getProducts()
+        const funcionAsincronica = categoriaId ? getProductsByCategory : getProducts
+
+        funcionAsincronica(categoriaId)
             .then(result =>{
                 setProducts(result)
             })    
-    }, [])
+    }, [categoriaId])
     
     return(
         <div>
